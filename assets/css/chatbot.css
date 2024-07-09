@@ -1,0 +1,35 @@
+#my-chatbot {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+#chat-history {
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#chat-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#send-message {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073aa;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
