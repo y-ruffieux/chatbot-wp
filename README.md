@@ -1,1 +1,1 @@
-You just need to add those files in wp-content\plugins in your Wordpress directories, and after add on the page you want the plugin with [SHORTCODE_NAME]
+You can read the doc (in french) to understand how integrate a chatbot to wordpress
