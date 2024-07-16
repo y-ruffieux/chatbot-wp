@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var chatHistory = document.getElementById('chat-history');
     var chatInput = document.getElementById('chat-input');
-    var sendMessageBtn = document.getElementById('send-message');
 
-    sendMessageBtn.addEventListener('click', function() {
+    function sendMessage() {
         var userMessage = chatInput.value.trim();
         if (userMessage === '') {
             return;
@@ -16,12 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
         chatHistory.appendChild(userMessageDiv);
 
         // Envoyer la requête au chatbot via fetch
-        fetch('http://localhost:8000/hospital-rag-agent', {
+        fetch('http://localhost:8000/aiaiai-rag-agent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ text: userMessage })
+            body: JSON.stringify({ 
+                text: userMessage,
+                session_id: "test"
+            })
         })
         .then(response => response.json())
         .then(data => {
@@ -43,5 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
             errorDiv.style.marginBottom = '10px';
             chatHistory.appendChild(errorDiv);
         });
+    }
+
+    chatInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            sendMessage();
+            event.preventDefault(); // Empêcher le saut de ligne dans le champ de saisie
+        }
     });
 });

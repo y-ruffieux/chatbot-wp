@@ -24,8 +24,7 @@ function my_chatbot_shortcode() {
     ?>
     <div id="my-chatbot">
         <div id="chat-history"></div>
-        <input type="text" id="chat-input" placeholder="Entrez votre message...">
-        <button id="send-message">Envoyer</button>
+        <input type="text" id="chat-input" placeholder="Demandez ce que vous voulez !">
     </div>
     <?php
     return ob_get_clean();

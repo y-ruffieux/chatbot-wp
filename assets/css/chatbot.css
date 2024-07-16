@@ -22,6 +22,7 @@
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 #send-message {
@@ -32,4 +33,22 @@
     color: white;
     cursor: pointer;
     margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 600px) {
+    #my-chatbot {
+        padding: 15px;
+    }
+
+    #chat-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #send-message {
+        width: 100%;
+        padding: 10px;
+    }
 }
